@@ -1,0 +1,71 @@
+{{! 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div>
+  {{#with main}}
+
+    <main>
+
+      <section>
+        {{> title data="Work history"  big=true}}
+        <div>
+          <ul>
+            {{#each works}}
+              <li>
+                <div>{{position}}</div>
+                <br>
+               
+                <div>{{duration.from}} - {{#if duration.to}} {{duration.to}} {{else}} (працюю дотепер) {{/if}}</div>
+                <br>
+                 {{!-- <div>{{> link text=company.name href=company.url blank=true isLine=false noline=true}}</div> --}}
+                 <b>{{#unless company.url}} {{company.name}} {{/unless}}</b>
+                <br>
+                <br>
+                <div><strong>Projects ({{projectAmount}})</strong></div>
+                <br>
+                <ul>
+                  {{#each projects}}
+                    <li>
+                      <div>{{> link text=name href=url blank=true isLine=false noline=true}}</div>
+                      <p>{{about}}</p>
+                      <div><em>Project stacks </em></div>
+                      <div>({{stackAmoGnt}})</div>
+                <br>
+                      {{#each stack}}
+                        <li>
+                          {{name}}                          
+                        </li>
+                      {{/each}}
+                <br>
+                      <div><em>Project awards </em></div>
+                <br>
+                      {{#each awards}}
+                        <li>
+                          {{name}}                         
+                        </li>
+                     {{/each}}
+
+                    </li>
+                  {{/each}}
+                </ul>
+                <br>
+                
+  
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </section>
+
+      
+    </main>
+  {{/with}}
+
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
