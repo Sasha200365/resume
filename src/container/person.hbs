@@ -1,0 +1,138 @@
+<div>
+  {{#with person}}
+    <section>
+      <div>
+        <h1>Ім'я: {{name}}</h1>
+        <h3>Вік: {{age}} роки</h3>
+        <h3>Стать: {{gender}} </h3>
+        <section>
+          {{#with address}}
+            <h2>Адреса:</h2>
+            <b>Вулиця: {{street}}</b>
+            <p><b>Місто: {{city}} </b></p>
+            <p><b>Штат: {{state}} </b></p>
+            <p><b>Індекс: {{zip}} </b></p>
+            <p><b>Країна: {{country}} </b></p>
+          {{/with}}
+        </section>
+        <div>
+          <h2>Освіта</h2>
+          <ul>
+            {{#each education}}
+              <li>Ступінь: <b>{{degree}}</b></li>
+
+              <li>Головна спеціальність:
+                <b>{{major}}</b></li>
+
+              <li>Навчальний заклад:
+                <b>{{university}}</b></li>
+
+              <li>Рік заснування:
+                <b>{{graduationYear}}</b>
+
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <section>
+          <h3>Робочий досвід</h3>
+          <ul>
+            {{#each workExperience}}
+              <li>Компанія: <b>{{company}}</b> </li>
+              <li>Посада: <b>{{title}}</b></li>
+              <li>
+                Період праці: з
+                <b>{{startDate}}</b>
+                по
+                <b>{{endDate}}</b></li>
+              <li>Обов'язки:</li>
+              <b>
+                <ul>
+                  <li>
+                    Developed new features for Google Maps
+                  </li>
+                  <li>
+                    Worked on improving search algorithms
+                  </li>
+                </ul>
+              </b>
+              <li>Рік заснування:
+                <b>{{year_founded}}</b></li>
+              <li>Галузь: <b>{{industry}}</b></li>
+              <li>Працівники: </li>
+              <ul>
+                {{#each employees}}
+                  <li>Ім'я: <b>{{name}}</b></li>
+                  <li>Посада: <b>{{position}}</b></li>
+                  <li>Відділ: <b>{{department}}</b></li>
+                  <li>Проекти: </li>
+                  <ul>
+                    {{#each projects}}
+                      <li>Назва: <b>{{name}}</b></li>
+                      <li>Опис: <b>{{description}}</b></li>
+                      <li>Статус: <b>{{status}}</b></li>
+                      <li>Команди: </li>
+                      <ul>
+                        {{#each teams}}
+                          <li>Ім'я:
+                            <b>{{team_name}}</b></li>
+                          <li>Лідер: </li>
+                          <ul>
+                            {{#with team_leader}}
+                              <li>Ім'я: <b>{{name}}</b></li>
+                              <li>Посада:
+                                <b>{{title}}</b></li>
+                              <li>Е-маіл:
+                                <em>{{email}}</em></li>
+                            {{/with}}
+                          </ul>
+                          <li>Члени команди: </li>
+                          <ul>
+                            {{#each team_members}}
+                              <li>Ім'я: <b>{{name}}</b></li>
+                              <li>Посада:
+                                <b>{{title}}</b></li>
+                              <li>Е-маіл:
+                                <em>{{email}}</em></li>
+                              <li>Скіли:
+                                <b>{{skills}}</b></li>
+                              <li>Проекти: </li>
+
+                              <ul>
+                                {{#each projects}}
+                                  <li>Назва:
+                                    <b>{{name}}</b></li>
+                                  <li>Опис:
+                                    <b
+                                    >{{description}}</b></li>
+                                  <li>Технології:
+                                    <b
+                                    >{{technologies}}</b></li>
+                                  <li>Члени команди: </li>
+                                  <ul>
+                                    {{#each team_members}}
+                                      <li>Ім'я:
+                                        <b>{{name}}</b></li>
+                                      <li>Посада:
+                                        <b
+                                        >{{title}}</b></li>
+                                    {{/each}}
+                                  </ul>
+                                {{/each}}
+                              </ul>
+
+                            {{/each}}
+                          </ul>
+                        {{/each}}
+                      </ul>
+                    {{/each}}
+                  </ul>
+                {{/each}}
+              </ul>
+            {{/each}}
+          </ul>
+        </section>
+      </div>
+    </section>
+  {{/with}}
+</div>
