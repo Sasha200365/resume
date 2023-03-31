@@ -1,0 +1,177 @@
+<div>
+  in progress
+
+  <section>
+    <div>
+      <h1>Ім'я: {{name}}</h1>
+      <h3>Дата народження: {{birthdate}}</h3>
+      <h4>Місце народження: {{birthplace}}</h4>
+      <h3>Дата смерті: {{deathdate}}</h3>
+      <h4>Місце смерті: {{deathplace}}</h4>
+      <h5>Національність: {{nationality}}</h5>
+      <h5>Професія: {{occupation}} </h5>
+      <h4>Відомий за: </h4>
+
+      <b>
+        <ul>
+          <li>
+            Theory of Relativity
+          </li>
+          <li>
+            E=mc²
+          </li>
+          <li>
+            Photoelectric Effect
+          </li>
+          <li>
+            Brownian Motion
+          </li>
+        </ul>
+      </b>
+    </div>
+  </section>
+
+  <section>
+    <div>
+      <h2>Освіта</h2>
+      <ul>
+        {{#each education}}
+          <li>Ступінь: <b>{{degree}}</b></li>
+
+          <li>Спеціальність:
+            <b>{{field}}</b></li>
+
+          <li>Навчальний заклад:
+            <b>{{institution}}</b></li>
+
+          <li>Рік закінчення:
+            <b>{{year}}</b>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div>
+      <h2>Відомі публікації</h2>
+      <ul>
+        {{#each notable_publications}}
+          <li>Стаття: <b>{{title}}</b></li>
+
+          <li>Рік публікації:
+            <b>{{year}}</b></li>
+
+          <li>Опубліковано в:
+            <b>{{publisher}}</b></li>
+          <br />
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div>
+      <h2>Дружини</h2>
+      <ul>
+        {{#each partners}}
+          <li>Іи'я: <b>{{name}}</b></li>
+
+          <li>Відносини:
+            <b>{{relationship}}</b></li>
+
+          <li>Роки:
+            <b>{{years}}</b></li>
+          <br />
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div>
+      <h2>Нагороди</h2>
+      <ul>
+        {{#each awards}}
+          <li>Назва: <b>{{title}}</b></li>
+          <li>Рік отримання:<b>{{year}}</b></li>
+          <li>В галузі:<b>{{description}}</b></li>
+          <br />
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div>
+      <h2>Вплинули:</h2>
+      <ul>
+        <li><b>Isaac Newton</b></li>
+        <li><b>James Clerk Maxwell</b></li>
+        <li><b>Hermann Minkowski</b></li>
+        <br />
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div>
+      <h2>Наступники:</h2>
+      <ul>
+        <li><b>Niels Bohr</b></li>
+        <li><b>Erwin Schrödinger</b></li>
+        <li><b>Werner Heisenberg</b></li>
+        <li><b>Richard Feynman</b></li>
+        <br />
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div>
+      <h2>Цитати:</h2>
+      <ul>
+        <li><b>"Imagination is more important than
+            knowledge"</b></li>
+        <li><b>"I have no special talent. I am only
+            passionately curious"</b></li>
+        <li><b>"The important thing is not to stop
+            questioning"</b></li>
+        <li><b>"The most beautiful thing we can experience
+            is the mysterious. It is the source of all true
+            art and all science"</b></li>
+        <br />
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div>
+      <h2>Великі відкриття</h2>
+      <ul>
+        {{#each major_discoveries}}
+          <li>Назва: <b>{{title}}</b></li>
+          <li>Рік відкриття: <b>{{year}}</b></li>
+          <li>Що саме: <b>{{description}}</b></li>
+          <br />
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div>
+      <h2>Внески</h2>
+      <ul>
+        {{#with contributions}}
+          <li>Назва: <b>{{title}}</b></li>
+          <li>Що саме: <b>{{description}}</b></li>
+          <li>Коли саме: <b>{{year}}</b></li>
+          <li>Вид: <b>{{field}}</b></li>
+          <br />
+        {{/with}}
+      </ul>
+    </div>
+  </section>
+
+</div>
