@@ -3,21 +3,17 @@
     <div>
       <h1>{{name}}</h1>
     </div>
-
     <div>
       {{#with location}}
         <h2>{{city}} ({{country}})</h2>
       {{/with}}
       <strong>{{date}}</strong>
     </div>
-
     <br />
     <hr />
-
     <section>
       {{>title data='Programs:' big=true}}
       <hr>
-
       {{#each program}}
         <h3>{{name}} - {{type}} - {{duration}} days</h3>
             {{#with details.museum}}
@@ -31,18 +27,15 @@
                 {{#each exhibits}}
                   <ul>
                     <li>
-                      <b>{{name}}</b> - <b><i>{{#if artist}} {{artist}} {{else}}No name artist{{/if}}</i></b>
+                      <b>{{name}}</b> - <b><i>{{#if artist}}
+                     {{artist}} {{else}}No name artist{{/if}}</i></b>
                        - {{description}} - 
                       {{#if audio_guide}}(automatic audio-guide){{/if}}
                     </li>
                   </ul>
                 {{/each}}
             {{/with}}
-            
-           
-           
-
-            {{#with details.venue}}
+              {{#with details.venue}}
                 <h4>{{name}}</h4>
             
                 {{#with location}}
@@ -50,23 +43,21 @@
                     <i>{{address}}  {{city}}  ({{country}})</i>
                   </h4> 
                 {{/with}}
-            {{/with}}
-
-              {{#each details.performers}}
-                <ul>
-                  <li>
-                    <b>{{name}} - <i>{{type}} </i></b>
-                  </li>
-                </ul>
-              {{/each}}            
-
-              {{#with details.guide}}
-                Gid name:  {{name}} - <b>{{language}}</b> / ratio ({{rating}})
               {{/with}}
-              <hr>
 
+            {{#each details.performers}}
+              <ul>
+                <li>
+                  <b>{{name}} - <i>{{type}} </i></b>
+                </li>
+              </ul>
+            {{/each}}            
+
+            {{#with details.guide}}
+              Gid name:  {{name}} - <b>{{language}}</b> / ratio ({{rating}})
+            {{/with}}
+            <hr>
       {{/each}}
     </section>
-
   {{/each}}
 </div>
