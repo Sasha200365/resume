@@ -1,0 +1,124 @@
+<div>
+
+  <div>
+    <h1>{{name}} ---> What is? </h1>
+    <h2>{{description}}</h2>
+  </div>
+
+  <div>
+    <h3>Year of fundation
+      {{history.year}}
+      by
+      {{history.founder}}</h3>
+    <hr />
+  </div>
+
+  <section>
+
+    <h1>It`s contains some parameters:</h1>
+
+    <ol>
+      <li><h2>Types:</h2></li>
+
+      <ul>
+        {{#each types}}
+          <li>
+            <h4> {{this}} </h4>
+          </li>
+        {{/each}}
+      </ul>
+      <hr />
+
+      <li><h2>Syntax:</h2></li>
+
+      {{#with syntax}}
+        <ul>
+          <li><h3>Variables:</h3></li>
+          {{#each variables}}
+            <ul>
+              <li>
+                {{this}}
+              </li>
+            </ul>
+          {{/each}}
+          <li><h3>Functions:</h3></li>
+          {{#each functions}}
+            <ul>
+              <li>
+                {{this}}
+              </li>
+            </ul>
+          {{/each}}
+          <li><h3>Conditionals:</h3></li>
+          {{#each conditionals}}
+            <ul>
+              <li>
+                {{this}}
+              </li>
+            </ul>
+          {{/each}}
+          <li><h3>Loops:</h3></li>
+          {{#each loops}}
+            <ul>
+              <li>
+                {{this}}
+              </li>
+            </ul>
+          {{/each}}
+          <li><h3>Classes:</h3></li>
+          {{#each classes}}
+            <ul>
+              <li>
+                {{this}}
+              </li>
+            </ul>
+          {{/each}}
+        </ul>
+      {{/with}}
+      <hr />
+
+      <li><h2>Features:</h2></li>
+      <ul>
+        {{#each features}}
+          <li>
+            <h4>{{this}}</h4>
+          </li>
+        {{/each}}
+      </ul>
+      <hr />
+
+      <li><h2>Libraries:</h2></li>
+      <ul>
+        {{#each libraries}}
+          <li>
+            <h4>{{this}}</h4>
+          </li>
+        {{/each}}
+      </ul>
+      <hr />
+
+      <li><h2>Tools:</h2></li>
+      <ul>
+        {{#each tools}}
+          <li>
+            <h4>{{this}}</h4>
+          </li>
+        {{/each}}
+      </ul>
+      <hr />
+
+      <li><h2>Community:</h2></li>
+      <ul>
+        {{#each community}}
+          <li>
+            <b>{{name}}</b>
+            -
+            <i>type</i>
+            -
+            <b>{{type}}</b>
+          </li>
+        {{/each}}
+      </ul>
+    </ol>
+  </section>
+</div>
