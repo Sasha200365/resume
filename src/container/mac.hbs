@@ -1,0 +1,108 @@
+<div>
+      <section>
+      <h1>{{name}}</h1>
+      <h2>{{description}}</h2>
+      <h3>Price: $ {{price}}</h3>
+      <h4>{{category}}</h4>
+      <hr>
+      <h4>Processor:</h4>
+      <h6>{{features.processor.brand}}</h6>
+      <h6>{{features.processor.model}}</h6>
+      <h6>{{features.processor.speed}}</h6>
+      <h6>{{features.processor.cores}}</h6>
+      <h6>{{features.processor.cache}}</h6>
+    </section>
+    <hr>
+    <section>      
+      <h4>Memory:</h4>
+      <h6>{{features.memory.type}}</h6>
+      <h6>{{features.memory.size}}</h6>
+      <h6>{{features.memory.speed}}</h6>
+    </section>
+    <hr>
+    <section>      
+      <h4>Storage:</h4>
+      <h6>{{features.storage.type}}</h6>
+      <h6>{{features.storage.size}}</h6>
+    </section>
+    <hr>
+    <section>
+     <h4>Display:</h4>
+      <h6>{{features.display.size}}</h6>
+      <h6>{{features.display.resolution}}</h6>
+      <h6>{{features.display.technology}}</h6>
+      <h6>{{features.display.color_space}}</h6>
+      <h6>{{features.display.brightness}}</h6>
+      <h6>{{features.display.refresh_rate}}</h6>
+    </section>
+    <hr>
+    <section>
+     <h4>Graphics:</h4>
+      <h6>{{features.graphics.brand}}</h6>
+      <h6>{{features.graphics.model}}</h6>
+      <h6>{{features.graphics.memory}}</h6>
+    </section>
+    <hr>
+    <section>
+     <h4>Ports:</h4>
+     
+     {{#each features.ports}}
+        <br>
+        <ol>
+              <li> <h6>{{type}}</h6> <li>          
+              <h6>Count: {{count}}</h6>
+            <br>
+            <h6>{{#each features}}
+                      <ul>
+                        <li>
+                          {{this}}
+                        </li>
+                      </ul>
+                {{/each}}            
+        </ol>
+      {{/each}}
+
+        
+      </h6>
+    </section>
+   
+   
+   <hr>
+    <section>
+     <h4>Battery:</h4>
+      <h6>{{features.battery.type}}</h6>
+      <h6>{{features.battery.capacity}}</h6>
+      <h6>{{features.battery.life}}</h6>
+    </section>
+    <hr>
+
+    <section>
+     <h4>Weight:</h4>
+      <h6>{{features.weight}}</h6>
+      <br>
+      <h4>Dimensions:</h4>
+      <h6>Height: {{features.dimensions.height}}</h6>
+      <h6>Width: {{features.dimensions.width}}</h6>
+      <h6>Depth: {{features.dimensions.depth}}</h6>
+    </section>
+    <hr>
+
+    <section>
+     <h4>Operating_system:</h4>
+      <h6>{{features.operating_system}}</h6>
+      <br>
+      <h4>Accessories:</h4>
+     
+     {{#each features.accessories}}
+        <br>
+        <ul>
+          <li>
+            <h6>{{name}}</h6>
+          </li>
+          <li>
+            <h6>Price: {{price}}</h6>
+          </li>          
+        </ul>
+     {{/each}}
+    </section>
+</div>
