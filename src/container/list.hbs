@@ -1,0 +1,156 @@
+<div>
+    {{!-- 4шт коду за один в індексс --}}
+  <ul>
+    {{#each list}}
+      <li>
+        {{#if @first}} ___first{{/if}}
+        {{#if @first}} <button>{{name}} </button>{{/if}}
+        {{#if @last}} <button>{{name}} </button>{{/if}}
+        {{#if @last}} disabled {{/if}}
+
+        <span>{{name}}</span>
+      </li>
+    {{/each}}
+        </ul>
+        </div>
+
+<hr class="my-5"> 
+    {{!-- список з кнопок, якщо остання, то неактивна! --}}
+<div>
+    {{#each list}}
+      <li>
+
+        <button {{#if @last}} disabled {{/if}}> {{name}} </button>
+
+        <span>{{name}}</span>
+      </li>
+    {{/each}}
+
+  </ul>
+</div>
+
+<hr class="my-5">
+
+<div>
+    {{#each list}}
+      <li>
+
+        <button {{#if @index2}} disabled {{/if}}> {{name}} - {{@index}} </button>
+
+        <span>{{name}}</span>
+      </li>
+    {{/each}}
+
+  </ul>
+</div>
+
+<hr class="my-5">
+
+<div>
+    {{#each list}}
+      <li>
+
+        <button {{#if @index2}} disabled {{/if}}> {{name}} - {{@key}} </button>
+
+        <span>{{name}}</span>
+      </li>
+    {{/each}}
+
+  </ul>
+</div>
+
+<hr class="my-5">
+{{!-- 5 --}}
+<div>
+    {{!-- звичайний массив --}}
+        {{#each user}}
+        <li>
+
+        {{this}}
+      </li>
+    {{/each}}
+
+  </ul>
+</div>
+
+<hr class="my-5">
+
+<div>
+    {{#each usersss}}
+      <li>
+
+        {{value}} {{txt}}
+      </li>
+    {{/each}}
+
+  </ul>
+</div>
+
+<hr class="my-5">
+
+
+<div>
+    {{!-- тут умовності - якщо є дві змінні: вел'ю і тхт --}}
+    
+    {{#each usersss}}
+    
+      <li>
+        {{@first}} 
+
+        {{#if value}} {{value}} {{else}} {{txt}} {{/if}}
+      </li>
+    {{/each}}
+
+  </ul>
+</div>
+
+<hr class="my-5">
+
+<div>
+    
+    {{#each usersss}}
+    
+      <li>
+        {{@index}} 
+        {{!-- тут присвоєння порядкових омерів списку --}}
+
+        {{#if value}} {{value}} {{else}} {{txt}} {{/if}}
+      </li>
+    {{/each}}
+
+  </ul>
+</div>
+
+<hr class="my-5">
+{{!-- 6 1--}}
+<div>
+    
+    {{#each usersss}}
+    
+      <li>
+        {{@key}} 
+        {{!-- тут ще + дані назви змінної --}}
+
+        {{#if value}} {{value}} {{else}} {{txt}} {{/if}}
+      </li>
+    {{/each}}
+
+  </ul>
+</div>
+
+<hr class="my-5">
+{{!-- 6 2 двокрапка і кома --}}
+<div>
+    
+    {{#each usersss}}
+    
+      <li>
+        {{@key}}: 
+        {{!-- тут ще + дані назви змінної --}}
+
+        {{#if value}} {{value}} {{else}} {{txt}} {{/if}},
+      </li>
+    {{/each}}
+
+  </ul>
+</div>
