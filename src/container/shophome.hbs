@@ -1,0 +1,191 @@
+<main> 
+  <section>
+  
+  <div class="row g-4">
+    <div class='col-3'>
+      <div class="card border-white">    
+        <h1>{{navigation.Logo}}</h1>
+      </div>
+    </div>
+      
+    <div class='col-9'>
+      <div class="card border-white">
+        <div class="m-2 text-end" >
+          {{#each navigation.links}} 
+            <button href="{{href}}" class='btn btn-outline-primary border-white px-1'>{{text}}</button>
+          {{/each}}              
+            <button href="#" class='btn disabled border-white ps-0'>Disabled</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  </section>
+
+  <section>
+   <h1 class="text-center mb-5">{{newsBlock.title}}</h1>
+    <div class="row g-4 ">
+      {{#each newsBlock.cards}}
+        <div class='col-3'>
+          <div class='card text-bg-dark text-white'>
+             <h6 class='card-header' >{{title}} 
+                {{#if isNew}}<span class="badge rounded-pill text-bg-success p-1">isNew{{/if}}</span>
+                {{#if isTop}}<span class="badge rounded-pill text-bg-danger p-1">isTop{{/if}}</span>
+              </h6>
+            <div class='card-body pb-2' >
+               <div>{{description}}</div>
+            </div>    
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </section>
+
+  <hr my-5>
+
+  <section>
+    <div class="row g-12">      
+      <div class="col-12">
+        <div class="nav nav-tabs">
+          {{#each goodsBlock.tabs}}
+            <div class="nav-item 
+              {{#if isActive}} active 
+              {{else}} disabled" {{/if}}>
+              <a  href="#" class="nav-link mb-0">{{text}}</a>
+            </div>
+          {{/each}}
+                
+        </div> 
+      </div>              
+    </div>    
+  </section>
+
+  <section>
+    <div class="row g-4">
+      {{#each goodsBlock.cards}}
+        <div class='col-4'>
+          <div class='card'>              
+              <img
+            class='card-img-top'
+            src='{{image}}'/>                  
+            <div class='card-body'>
+              <h6 class='card-title'>{{title}}
+                {{#if isNew}}<span class="badge rounded-pill text-bg-primary p-1">isNew{{/if}}</span>
+                {{#if isHot}}<span class="badge rounded-pill text-uppercase text-bg-warning p-1">isHot!{{/if}}</span> 
+              </h6>
+              {{description}}
+            </div>
+          </div>            
+        </div> 
+      {{/each}}
+    </div>    
+  </section>
+
+  <hr class="my-5">
+
+  <section>
+    <div class='card text-bg-dark'>
+      <div class="row g-12">
+        <div class="coll-7">
+          <h2 class='card-body' >{{subscribe.header}}
+        </div>
+            <div class="coll-5">
+              <div class="text-end">
+                {{#each subscribe.buttons}}   
+                  <a href="{{link}}" class="btn btn-primary ">{{text}}</a>
+                {{/each}}
+              </div>
+              <div>{{subscribe.description}}</div>
+          </h2> 
+        </div> 
+      </div>   
+    </div>
+  </section>
+
+  <hr class="my-5">
+
+  <section>
+    <div class='card text-bg-success'>
+      <div class='card-body text-center'>
+        <h2 class='card-title'>{{service.title}}</h2>
+        <p>{{service.description}}</p>
+        {{#each service.buttons}}
+        <button link="{{link}}" class="btn btn-primary">{{text}}</button>
+        {{/each}}      
+      </div>
+    </div>
+  </section>
+  
+  <hr class="mt-5">
+
+  <section>
+        
+    <div class="row g-4 ">
+      <div class='col-2'>          
+        <div class='card border-white'>  
+             <div class="nav">
+              <div class="nav-item ">      
+          {{#each footer.[0]}}
+                <a class="nav-link " href='{{link}}' >{{text}}</a>
+                <a{{#if [3]}} class='nav-link disabled'{{/if}}></a>
+            {{/each}}
+           </div>
+            </div> 
+        </div>            
+      </div>
+
+      <div class='col-2'>          
+        <div class='card border-white'>            
+          {{#each footer.[1]}}
+            <div class="nav">
+              <div class="nav-item">
+                <a href='{{link}}' class="nav-link ">{{text}}</a>
+                <div{{#if [3]}} class='nav-link disabled'{{/if}}></div>
+              </div>
+            </div>        
+            {{/each}}
+        </div>            
+      </div>
+
+      <div class='col-2'>          
+        <div class='card border-white'>            
+          {{#each footer.[2]}}
+            <div class="nav">
+              <div class="nav-item">
+                <a href='{{link}}' class="nav-link ">{{text}}</a>
+                <div{{#if [3]}} class='nav-link disabled'{{/if}}></div>
+              </div>
+            </div>        
+            {{/each}}
+        </div>            
+      </div>
+
+      <div class='col-2'>          
+        <div class='card border-white'>            
+          {{#each footer.[3]}}
+            <div class="nav">
+              <div class="nav-item">
+                <a href='{{link}}' class="nav-link ">{{text}}</a>
+                <div{{#if [3]}} class='nav-link disabled'{{/if}}></div>
+              </div>
+            </div>        
+            {{/each}}
+        </div>            
+      </div>
+
+      <div class='col-2'>          
+        <div class='card border-white'>            
+          {{#each footer.[4]}}
+            <div class="nav">
+              <div class="{{#if [3]}} nav-item disabled' {{/if}}">
+                <a href='{{link}}' class="nav-link ">{{text}}</a>
+                <div></div>
+              </div>
+            </div>        
+            {{/each}}
+        </div>            
+      </div>
+    </div>
+  </section>
+
+</main>

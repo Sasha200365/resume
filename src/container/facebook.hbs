@@ -1,0 +1,74 @@
+<main>
+
+  <section>
+    <h1>{{name}}</h1>
+
+    {{#each users}}
+      <div class='mt-3'><b>User </b>{{id}}. Name:
+        {{name}}. Gender:
+        {{gender}}. Age:
+        {{age}}</div>
+      {{#each friends}}
+        <div class='ms-2'><b>- Frend </b>{{id}}. Name:
+          {{name}}. Gender:
+          {{gender}}. Age:
+          {{age}}</div>
+        {{#each mutual_friends}}
+          <div class='ms-4'><b>-- Malual_Frend </b>{{id}}.
+            Name:
+            {{name}}. Gender:
+            {{gender}}. Age:
+            {{age}}</div>
+          {{#each mutual_friends}}
+            <div class='ms-4'><b>-- Malual_Frend </b>{{id}}.
+              Name:
+              {{name}}. Gender:
+              {{gender}}. Age:
+              {{age}}</div>
+          {{/each}}
+        {{/each}}
+
+        {{#each groups}}
+
+          <div class='pt-3'><b>Group N </b>{{id}}. Name:
+            {{name}}. Description:
+            {{description}}.
+          </div>
+
+          {{#each members}}
+            <div class='ms-4'><b>- Group member </b>{{id}}.
+              Name:
+              {{name}}. Gender:
+              {{gender}}. Age:
+              {{age}}
+            </div>
+          {{/each}}
+        {{/each}}
+
+      {{/each}}
+      {{#each groups}}
+        <div class='mt-3'><b>Group N </b>{{id}}. Name:
+          {{name}}. Description:
+          {{description}}.
+        </div>
+        {{#each members}}
+          <div class='ms-4'><b>- Group member </b>{{id}}.
+            Name:
+            {{name}}. Gender:
+            {{gender}}. Age:
+            {{age}}
+          </div>
+        {{/each}}
+      {{/each}}
+      {{#each friends.mutual_friends.mutual_friends}}
+        <div class='ms-6'><b>-- Malual_Frend </b>{{id}}.
+          Name:
+          {{name}}. Gender:
+          {{gender}}. Age:
+          {{age}}
+        </div>
+      {{/each}}
+    {{/each}}
+  </section>
+
+</main>

@@ -1,0 +1,420 @@
+<main>
+
+  {{! LESSON 4 }}
+  <div class='card'>
+  <div class="nav">
+    
+    <div class="nav-item">
+      <a href="/skills" class="nav-link active">Home page</a>
+    </div>
+    <div class="nav-item">
+      <a href="#" class="nav-link">Catalog</a>
+    </div>
+    <div class="nav-item">
+      <a href="#" class="nav-link disabled">FAQ page</a>
+    <p class="btn btn-primary">Activ</p>
+    </div>
+    </div>    
+  </div>
+  <hr>
+
+<div class="row g-12">
+   {{!-- g-2 це дуже важливо, щоб писало в Рядок --}}
+   <div class="col-12">
+    <div class="nav nav-tabs">
+              
+              <div class="nav-item">
+                
+                  <a href="/summary" class="nav-link ">Site</a>
+                
+              </div>
+              <div class="nav-item">
+                <a href="#" class="nav-link">Cata-glog</a>
+              </div>
+              <div class="nav-item">
+               
+                  <a href="#" class="nav-link active">FAQ no-page</a>
+                
+               
+              
+              </div>
+          </div>  
+<br>
+   </div>
+
+
+  <div class="col-4">
+      <div class='card'>
+        <div class="card-body">
+          {{!-- кард-баді надає відступи всередині карточки -
+           замість баді можна поставити відступи р- паддінг--}}
+          <div class="nav flex-column">
+              
+              <div class="nav-item">
+                <div class="card">
+                  <a href="/skills" class="nav-link active">Home page</a>
+                </div>
+              </div>
+              <div class="nav-item">
+                <a href="#" class="nav-link">Catalog</a>
+              </div>
+              <div class="nav-item">
+                <div class="card">
+                  <a href="#" class="nav-link disabled">FAQ page</a>
+                </div>
+                
+                 <p class="btn btn-primary mt-5 mb-0">Activ</p>
+              </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-4">   
+        <div class="breadcrumb">
+          <p class='breadcrumb-item'><a href="#" >home</a></p>
+          <p class='breadcrumb-item'><a href="#">dor</a></p>
+          <p class='breadcrumb-item'><a href="#" >street</a></p>
+          <p class='breadcrumb-item'><a href="#" >car</a></p>
+        </div>
+    </div>
+
+
+
+    <div class="col-4">
+        <ul class="breadcrumb">
+          <li class='breadcrumb-item'><a href="#" >home</a></li>
+          <li class='breadcrumb-item'><a href="#">dor</a></li>
+          <li class='breadcrumb-item'><a href="#" >street</a></li>
+          <li class='breadcrumb-item'>car</li>
+        </ul>  
+    </div>
+
+    <div class="col-4">
+        <ul>
+          <li >home <span class="badge rounded-pill text-uppercase text-bg-primary">top sale</span></li>
+          <li >street <span class="badge text-cpitalize text-bg-warning">sale top</span></li>
+          <li >car <span class="badge rounded-pill text-bg-success text-uppercase">best car</span></li>
+          
+          <li><button class='btn btn-primary rounded-pill'>Click me</button></li>
+          <li class="alert alert-info">This is atantion</li>
+        </ul>  
+    </div>
+
+    <div class="col-8">
+      <button class='btn btn-danger rounded-pill m-3'>Click me</button>
+      <button class='btn btn-danger rounded-pill mb-5'>Click me</button>
+      <button class='btn btn-danger rounded-pill ms-3'>Click me</button>
+      <button class='btn btn-danger rounded-pill ms-4 mb-5'>Click me</button>
+      <div class="alert alert-warning"><div class="col-8">
+        {{!-- в цьому повідомленні весь перередній список --}}
+        <ul>
+          <li >home <span class="badge rounded-pill text-uppercase text-bg-primary">top sale</span></li>
+          <li >street <span class="badge text-cpitalize text-bg-warning">sale top</span></li>
+          <li >car <span class="badge rounded-pill text-bg-success text-uppercase">best car</span></li>
+          
+          <li><button class='btn btn-primary rounded-pill'>Click me</button></li>
+          <li class="alert alert-info">This is atantion</li>
+        </ul>  
+    </div>
+    </div>
+    
+
+
+    </div>
+
+
+
+
+
+
+    
+</div>
+
+
+  
+
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+
+  {{! LESSON 3 }}
+
+  <div class='card text-bg-danger'>
+    <img
+      class='card-img-top'
+      src='https://picsum.photos/400/200'
+      alt='Product Photo'
+    />
+    <div class='card-body'>
+      <h5 class='card-title text-bg-warning'>product 12345</h5>
+      <p class='text-bg-secondary'>Hub usb
+        <br />super tyga</p>
+      <a href='/task22' class='btn btn-primary'>
+        Git_forever</a>
+
+    </div>
+  </div>
+
+  <hr />
+
+  <h4>Menu:</h4>
+  <div class='list-group'>
+    <div class='list-group-item'><a
+        href='#'
+        class='btn btn-link'
+      >Tovar1</a></div>
+    <div class='list-group-item'><a
+        href='#'
+        class='btn btn-link'
+      >Tovar2</a></div>
+    <div class='list-group-item'><a
+        href='/skills#'
+        class='btn btn-link'
+      >Tovar3</a></div>
+    <div class='list-group-item'>Item2</div>
+
+  </div>
+  <br />
+
+  <div class='card text-bg-primary'>
+    <p class='card-header'>Menu</p>
+    <div class='card-body'>
+
+      {{! Можна через ui ii те, що внизу }}
+
+      <div class='list-group'>
+        <div class='list-group-item text-bg-success'><a
+            href='#'
+            class='btn btn-link'
+          >Tovar1</a></div>
+        <div class='list-group-item text-bg-secondary'><a
+            href='#'
+            class='btn btn-link'
+          >Tovar2</a></div>
+        <div class='list-group-item'><a
+            href='/skills#'
+            class='btn btn-link'
+          >Tovar3</a></div>
+        <div class='list-group-item'>Item2</div>
+
+      </div>
+      <div class='card-footer'>
+        <button class='card-footer'>Update</button>
+
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <table class='table table-striped'>
+    <thead>
+      <tr>
+        <th>
+          #id
+        </th>
+        <th>
+          name
+        </th>
+        <th>
+          age
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>1</th>
+        <td>Sofi</td>
+        <td>19</td>
+
+      </tr>
+      <tr>
+        <th>2</th>
+        <td>Juli</td>
+        <td>21</td>
+
+      </tr>
+      <tr>
+        <th>3</th>
+        <td>Angelica</td>
+        <td>20</td>
+
+      </br>
+    </tbody>
+  </table>
+  <br />
+
+  <div class='card text-bg-light'>
+    <div class='card-header text-center'>Header</div>
+    <div class='card-body text-center'>
+      <h6 class='card-title'>Second title</h6>
+      <p>discriptions s s ssssssssssssss sssssss</p>
+      <button class="btn btn-warning">Warning</button>
+       <div class='card-footer'>Footerr</div>
+  </div>
+  </div>
+  <br />
+
+  <div class='card text-bg-primary'>
+    {{! Кард тайтл вставляється всередину боді }}
+    <div class='card-body'>
+      <div class='card-title'>Title</div>
+      discriptions</div>
+
+  </div>
+  <br>
+  <br>
+
+  <div class="row">
+    <div class='col-3'>
+       <div class='card text-bg-primary'>
+    {{! Кард тайтл вставляється всередину боді }}
+    <div class='card-body'>
+      <div class='card-title'>Title</div>
+      discriptions</div>     
+
+  </div>
+  </div>
+  
+
+  <div class='col-6'>
+       <div class='card text-bg-primary'>
+    {{! Кард тайтл вставляється всередину боді }}
+    <div class='card-body'>
+      <div class='card-title'>Title</div>
+      discriptions</div>
+  
+
+    </div>
+      </div>
+    
+        <div class='col-3'>
+          <div class='card text-bg-primary'>
+        {{! Кард тайтл вставляється всередину боді }}
+        <div class='card-body'>
+          <div class='card-title'>Title</div>
+          discriptions</div>
+      
+
+      </div>
+
+      
+
+
+  </div>
+
+  <hr />
+  <div class="row g-5">
+    <div class='col-5'>
+       <div class='card text-bg-warning'>
+    {{! Кард тайтл вставляється всередину боді }}
+    <div class='card-body'>
+      <div class='card-title'>Title</div>
+      discriptions</div>     
+
+  </div>  
+  </div>
+
+  <div class='col-5'>
+       <div class='card text-bg-warning'>
+    {{! Кард тайтл вставляється всередину боді }}
+    <div class='card-body'>
+      <div class='card-title'>Title</div>
+      discriptions</div>     
+
+  </div>  
+  </div>
+
+  <div class='col-5'>
+       <div class='card text-bg-warning'>
+    {{! Кард тайтл вставляється всередину боді }}
+    <div class='card-body'>
+      <div class='card-title'>Title</div>
+      discriptions</div>     
+
+  </div>  
+  </div>
+
+  </div>
+
+  <hr />
+
+  <hr />
+
+  <hr />
+
+  <hr />
+
+  <h1 class='text-center'>Hello world!</h1>
+  <h2 class='text-end'>teg h2</h2>
+  <h3>vav! teg h3</h3>
+
+  <hr />
+
+  <div class='display-1 text-muted'>
+    Hello world!
+  </div>
+  <div class='display-4'> teg h2</div>
+  <div class='display-6'> vav! teg h </div>
+  <hr />
+
+  <span class='text-muted'> text is dodoatkovy</span>
+
+  <hr />
+
+  {{! <button class='btn btn-link'>
+    <span class='text-uppercase display-4'>
+      Text batton</span>
+    <h1> Test</h1>
+  </button> }}
+
+  <div class='card'>
+    <div class='card-body'>
+
+      <a href='#' class='btn btn-link btn-outline-success'>
+        <span class='text-uppercase display-6'>
+          Text batton</span>
+        <h2> Test</h2>
+      </a>
+
+      <a href='#' class='btn btn-primary'>
+        <span class='text-uppercase display-6'>
+          Text batton</span>
+        <h2> Test</h2>
+      </a>
+
+    </div>
+  </div>
+
+  <p class='text-warning display-3'>My text</p>
+  <hr />
+  <p class='btn btn-outline-danger'> My outline button</p>
+  <p class='btn btn-secondary btn-sm'> My small button</p>
+  <p class='btn btn-secondary btn-lg'> My LARGE button </p>
+  <hr />
+  <div class='card'>
+    <div class='card-body'>
+      This is content
+    </div>
+  </div>
+  <br />
+  <br />
+
+  <div class='card'>
+    <div class='card-body'>
+      <p class='btn btn-outline-danger'>
+        My outline button</p>
+      <p class='btn btn-secondary btn-sm'>
+        My small button</p>
+      <p class='btn btn-secondary btn-lg'>
+        My LARGE button
+      </p>
+    </div>
+  </div>
+
+</main>
