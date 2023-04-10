@@ -1,27 +1,5 @@
 <main> 
-  <section>
   
-  <div class="row g-4">
-    <div class='col-3'>
-      <div class="card border-white">    
-        <h1>{{navigation.Logo}}</h1>
-      </div>
-    </div>
-      
-    <div class='col-9'>
-      <div class="card border-white">
-        <div class="m-2 text-end" >
-          {{#each navigation.links}} 
-            <button href="{{href}}" class='btn btn-outline-primary border-white px-1'>{{text}}</button>
-          {{/each}}              
-            <button href="#" class='btn disabled border-white ps-0'>Disabled</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr />
-  </section>
-
   <section>
    <h1 class="text-center mb-5">{{newsBlock.title}}</h1>
     <div class="row g-4 ">
@@ -84,108 +62,12 @@
   <hr class="my-5">
 
   <section>
-    <div class='card text-bg-dark'>
-      <div class="row g-12">
-        <div class="coll-7">
-          <h2 class='card-body' >{{subscribe.header}}
-        </div>
-            <div class="coll-5">
-              <div class="text-end">
-                {{#each subscribe.buttons}}   
-                  <a href="{{link}}" class="btn btn-primary ">{{text}}</a>
-                {{/each}}
-              </div>
-              <div>{{subscribe.description}}</div>
-          </h2> 
-        </div> 
-      </div>   
-    </div>
+    {{> shopcard}}
   </section>
 
   <hr class="my-5">
-
-  <section>
-    <div class='card text-bg-success'>
-      <div class='card-body text-center'>
-        <h2 class='card-title'>{{service.title}}</h2>
-        <p>{{service.description}}</p>
-        {{#each service.buttons}}
-        <button link="{{link}}" class="btn btn-primary">{{text}}</button>
-        {{/each}}      
-      </div>
-    </div>
-  </section>
+{{> shopaction}}
   
   <hr class="mt-5">
-
-  <section>
-        
-    <div class="row g-4 ">
-      <div class='col-2'>          
-        <div class='card border-white'>  
-             <div class="nav">
-              <div class="nav-item ">      
-          {{#each footer.[0]}}
-                <a class="nav-link " href='{{link}}' >{{text}}</a>
-                <a{{#if [3]}} class='nav-link disabled'{{/if}}></a>
-            {{/each}}
-           </div>
-            </div> 
-        </div>            
-      </div>
-
-      <div class='col-2'>          
-        <div class='card border-white'>            
-          {{#each footer.[1]}}
-            <div class="nav">
-              <div class="nav-item">
-                <a href='{{link}}' class="nav-link ">{{text}}</a>
-                <div{{#if [3]}} class='nav-link disabled'{{/if}}></div>
-              </div>
-            </div>        
-            {{/each}}
-        </div>            
-      </div>
-
-      <div class='col-2'>          
-        <div class='card border-white'>            
-          {{#each footer.[2]}}
-            <div class="nav">
-              <div class="nav-item">
-                <a href='{{link}}' class="nav-link ">{{text}}</a>
-                <div{{#if [3]}} class='nav-link disabled'{{/if}}></div>
-              </div>
-            </div>        
-            {{/each}}
-        </div>            
-      </div>
-
-      <div class='col-2'>          
-        <div class='card border-white'>            
-          {{#each footer.[3]}}
-            <div class="nav">
-              <div class="nav-item">
-                <a href='{{link}}' class="nav-link ">{{text}}</a>
-                <div{{#if [3]}} class='nav-link disabled'{{/if}}></div>
-              </div>
-            </div>        
-            {{/each}}
-        </div>            
-      </div>
-
-      <div class='col-2'>          
-        <div class='card border-white'>            
-          {{#each footer.[4]}}
-            <div class="nav">
-              <div class="{{#if [3]}} nav-item disabled' {{/if}}">
-                <a href='{{link}}' class="nav-link ">{{text}}</a>
-                <div></div>
-              </div>
-            </div>        
-            {{/each}}
-        </div>            
-      </div>
-    </div>
-  </section>
 
 </main>
