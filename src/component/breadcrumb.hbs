@@ -1,0 +1,10 @@
+<section>    
+    <div class="col-8">
+      <div class="breadcrumb">
+        {{#each breadcrumb}}
+              <a class='breadcrumb-item {{#if @last}} active {{/if}}'
+              href={{url}}> {{name}}</a>
+          {{/each}}          
+      </div>        
+    </div>   
+  </section>
