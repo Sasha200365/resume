@@ -1,0 +1,14 @@
+<section class='mb-3'>
+  <div class='card text-bg-success'>
+    <div class='card-body text-center'>
+      <h2 class='card-title'>{{service.title}}</h2>
+      <p>{{service.description}}</p>
+      {{#each service.buttons}}
+        <button
+          link='{{link}}'
+          class='btn btn-primary'
+        >{{text}}</button>
+      {{/each}}
+    </div>
+  </div>
+</section>

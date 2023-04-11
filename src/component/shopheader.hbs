@@ -1,0 +1,28 @@
+<header>
+  <section>
+    <div class='row g-4'>
+      <div class='col-3'>
+        <div class='card border-white'>
+          <h1>{{navigation.Logo}}</h1>
+        </div>
+      </div>
+      <div class='col-9'>
+        <div class='card border-white'>
+          <div class='m-2 text-end'>
+            {{#each navigation.links}}
+              <button
+                href='{{href}}'
+                class='btn btn-outline-primary border-white px-1'
+              >{{text}}</button>
+            {{/each}}
+            <button
+              href='#'
+              class='btn disabled border-white ps-0'
+            >Disabled</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+  </section>
+</header>
