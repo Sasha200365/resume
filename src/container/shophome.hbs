@@ -24,35 +24,29 @@
   </section>
 
   <section>
-    <div class="row g-4">
-      {{#each goodsBlock.cards}}
-        <div class='col-4'>
-          <div class='card'>              
-              <img
-            class='card-img-top'
-            src='{{image}}'/>                  
-            <div class='card-body'>
-              <h6 class='card-title'>{{title}}
-                {{#if isNew}}<span class="badge rounded-pill text-bg-primary p-1">isNew{{/if}}</span>
-                {{#if isHot}}<span class="badge rounded-pill text-uppercase text-bg-warning p-1">isHot!{{/if}}</span> 
-              </h6>
-              {{description}}
-            </div>
-          </div>            
-        </div> 
-      {{/each}}
-    </div>    
+    {{> shopcard}}
   </section>
 
   <hr class="my-5">
 
   <section>
-    {{> shopcard}}
+    <div class="card text-bg-dark">
+      <div class="card-body">
+        <h3> {{subscribe.header}}</h3>
+        <p>{{subscribe.description}}</p>
+          {{#each subscribe.buttons}}
+            <div>
+              <button class="btn text-bg-primary my-2" href="{{subscribe.link}}">
+                {{text}}
+              </button> 
+            </div>
+          {{/each}}
+      </div>
+    </div>
   </section>
 
   <hr class="my-5">
 {{> shopaction}}
   
-  <hr class="mt-5">
-
+  
 </main>
