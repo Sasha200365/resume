@@ -1,32 +1,30 @@
-{{#each goodsBlock}}
-    <div class="card my-4">
-      <divx class="container">
-        <div class="row">
-          <div class="col-2">
-            <img src="https://picsum.photos/110/110" alt="Product photo">           
-          </div>
+<div class="card my-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+        <img src="https://picsum.photos/110/110" alt="Product photo">           
+      </div>
 
-          <div class="col-4">
-            <h6>{{name}}</h6>
-            <p>{{description}}</p>
-          </div>
+      <div class="col-4">
+        <h6>{{name}}</h6>
+        <p>{{description}}</p>
+      </div>
 
-          <div class="col-2 py-5">
-            {{price.title}}:
-            <p>{{price.value}}</p>
-          </div>
+      <div class="col-2 py-5">
+        {{price.title}}:
+        <p>{{price.value}}</p>
+      </div>
 
-          <div class="col-1 py-5">
-              {{amount}}
-          </div>
-            
-          <div class="col-3 text-center py-4">
-            {{#each buttons}}
-              {{#if isPrimary}}<button class="btn text-bg-primary">{{text}}</button>{{/if}} 
-              {{#if isDanger}}<button class="btn btn-outline-danger">{{text}}</button>{{/if}}</p> 
-            {{/each}}
-          </div>
-        </div> 
-      </div>         
-    </div>
-  {{/each}}
+      <div class="col-1 py-5">
+          {{amount}}
+      </div>
+        
+      <div class="col-3 text-center py-4">
+        {{#each buttons}}
+          {{#if isPrimary}}<button class="btn text-bg-primary">{{text}}</button>{{/if}} 
+          {{#if isDanger}}<button class="btn btn-outline-danger">{{text}}</button>{{/if}}</p> 
+        {{/each}}
+      </div>
+    </div> 
+  </div> 
+</div>
