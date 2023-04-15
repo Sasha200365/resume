@@ -5,9 +5,11 @@
   </a>
   
   <hr class="my-5">
-  
-  {{> cartGoodsItem}}
 
+  {{#each goodsBlock}}
+   {{> cartGoodsItem}}
+  {{/each}}
+  
   <hr class="my-5">
 
   <h3>{{total.title}}</h3>
