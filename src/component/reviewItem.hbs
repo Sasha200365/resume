@@ -1,0 +1,45 @@
+<div class='card my-4'>
+  <div class='card m-2'>
+    <h5 class='p-2 pb-0'> {{title.userName}}</h5>
+    <div class='p-2 py-0'>{{title.caption}}</div>
+    <div class='p-2 pt-0'>{{title.date}}</div>
+    <hr class='my-0' />
+
+    <div class='p-2'>
+      {{reviewBody.seller.title}}:
+      {{reviewBody.seller.value}}
+    </div>
+    <div class='p-2'>
+      {{reviewBody.rating.title}}:
+      {{reviewBody.rating.value}}
+    </div>
+    <div class='p-2'>
+      {{#each reviewBody.text}}
+        <p>{{this}}</p>
+      {{/each}}
+    </div>
+    <div class='p-2'>
+      <b>{{reviewBody.advantages.title}}: </b>
+      <p>{{reviewBody.advantages.text}}</p>
+    </div>
+    <div class='p-2'>
+      <b>{{reviewBody.disadvantages.title}}: </b>
+      <p>{{reviewBody.disadvantages.text}}</p>
+    </div>
+    <div class='p-2'>
+      {{#each reviewBody.images}}
+        <img src='{{this}}' />
+      {{/each}}
+    </div>
+  </div>
+
+  <div class='ms-5'>
+    {{#each reviewBody.coments}}
+      <div class='card m-2 p-2'>
+        <b>{{userName}}</b>
+        <div class='py-2'>{{date}}</div>
+        <div>{{text}}</div>
+      </div>
+    {{/each}}
+  </div>
+</div>
