@@ -1,22 +1,56 @@
-{{! 
-Це код container файлу для index сторінки, 
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
- }}
+<main>
+    
+  {{#with page}}
+        <section>
+          {{> title class='text-center' data="Not-my resume-pet abuot not-my :)"  big=true}}
+        </section>
+  {{/with}}
+  <div class="row">
+    <div class="col-6">
+      <div class="card my-5">
+        {{#with first}}
+          <h3 class="ps-1 pb-5">{{prof}}</h3>
+          <h3 class="ps-3"><a href="{{summary}}">Summary</a></h3>
+          <h3 class="mt-3 ps-3"><a href="{{skills}}">Skills</a></h3>
+          <h3 class="mt-3 ps-3"><a href="{{education}}">Education</a></h3>
+          <h3 class="mt-3 ps-3"><a href="{{work}}">Work</a></h3>
+        {{/with}}
+      </div>
+    </div>  
 
-<div class='p-5'>
+    <div class="col-6">
+      <div class="card my-5">
+        {{#with second}}
+          <h3 class="ps-2 pb-5">{{hobby}}</h3>
+          <h3 class="ps-3"><a href="{{person}}">Emma</a></h3>
+          <h3 class="mt-3 ps-3"><a href="{{bio}}">Idol</a></h3>
+          <h3 class="mt-3 ps-3"><a href="{{program}}">Cultural</a></h3>
+          <h3 class="mt-3 ps-3"><a href="{{web}}">Web</a></h3>
+          <h3 class="mt-3 ps-3"><a href="{{js}}">JS-story</a></h3>
+          <h3 class="mt-3 ps-3"><a href="{{car}}">Car</a></h3>
+          <h3 class="mt-3 ps-3"><a href="{{mac}}">Nout</a></h3>
+          <h3 class="mt-3 ps-3"><a href="{{facebook}}">My Facebook</a></h3>
+        {{/with}}
+      </div>
+    </div>  
+  </div>
 
-  <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
+  <div class="col-12">
+    <div class="card text-center my-5">
+      {{#with third}}
+        <h3 class="text-center pb-4">{{shop}}</h3>
+        <h3 class="mt-3"><a href="{{shophome}}">ShopHome</a></h3>
+        <h3 class="mt-3"><a href="{{shopproduct}}">ShopProducut</a></h3>
+        <h3 class="mt-3"><a href="{{shopnews}}">ShopNews</a></h3>
+        <h3 class="mt-3"><a href="{{shoporder}}">ShopOrder</a></h3>
+        <h3 class="mt-3"><a href="{{shopcart}}">ShopCart</a></h3>
+        <h3 class="mt-3"><a href="{{shopprofile}}">ShopProfile</a></h3>
+        <h3 class="mt-3"><a href="{{shopreview}}">ShopReview</a></h3>
+        <h3 class="mt-3"><a href="{{shopcatalog}}">ShopCatalog</a></h3>
+      {{/with}}
+    </div>
+  </div>  
+      
+</main>
 
-  <button
-    type='button'
-    class='btn btn-danger'
-  >Купити</button>
 
-</div>
-
-{{! <h1>Hello world</h1> }}
-
-{{! 
-    Цей код містить лише те, що буде виводитись в <body>
-    Адже наш layout/default.hbs має вже структуру HTML
-}}

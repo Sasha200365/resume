@@ -47,11 +47,11 @@
      <h4>Ports:</h4>
      
      {{#each features.ports}}
-        <br>
+       
         <ol>
               <li> <h6>{{type}}</h6> <li>          
-              <h6>Count: {{count}}</h6>
-            <br>
+              <h6>USB: {{count}}</h6>
+           
             <h6>{{#each features}}
                       <ul>
                         <li>
@@ -78,8 +78,8 @@
 
     <section>
      <h4>Weight:</h4>
-      <h6>{{features.weight}}</h6>
-      <br>
+      <h6 class="mb-3">{{features.weight}}</h6>
+      
       <h4>Dimensions:</h4>
       <h6>Height: {{features.dimensions.height}}</h6>
       <h6>Width: {{features.dimensions.width}}</h6>
@@ -89,18 +89,18 @@
 
     <section>
      <h4>Operating_system:</h4>
-      <h6>{{features.operating_system}}</h6>
-      <br>
+      <h6 class="mb-3">{{features.operating_system}}</h6>
+     
       <h4>Accessories:</h4>
      
      {{#each features.accessories}}
-        <br>
+        
         <ul>
           <li>
             <h6>{{name}}</h6>
           </li>
           <li>
-            <h6>Price: {{price}}</h6>
+            <h6 class="mb-4">Price: {{price}}</h6>
           </li>          
         </ul>
      {{/each}}

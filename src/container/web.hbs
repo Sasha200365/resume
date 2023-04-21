@@ -1,0 +1,66 @@
+<section>
+
+  <h1> About HTML CSS JS</h1>
+  <hr class='mt-5' />
+
+  {{#with web}}
+
+    {{#each languages}}
+
+      <h2>{{name}}</h2>
+      <h4>Version: {{version}}</h4>
+      <h6>Description: {{description}}</h6>
+
+      <p><h5>Contains Elemetts: </h5></p>
+      {{#each elements}}
+        <ul>
+          <li>Name: {{name}}</li>
+          Description:
+          {{description}}
+          <div>Has Attributes: </div>
+          {{#each attributes}}
+            <ul>
+              <li>name: {{name}}</li>
+              description:
+              {{description}}
+            </ul>
+          {{/each}}
+        </ul>
+      {{/each}}
+
+      {{#each properties}}
+        <ul>
+          <li>Name: {{name}}</li>
+          Description:
+          {{description}}
+          <div>Has Properties: </div>
+          {{#each values}}
+            <ul>
+              <li>color: {{value}}</li>
+              description:
+              {{description}}
+            </ul>
+          {{/each}}
+        </ul>
+      {{/each}}
+
+      {{#each functions}}
+        <ul>
+          <li>Name: {{name}}</li>
+          Description:
+          {{description}}
+          <div>Has Parameters: </div>
+          {{#each parameters}}
+            <ul>
+              <li>name: {{name}}</li>
+              type:
+              {{type}}
+              <p>description: {{description}}</p>
+            </ul>
+          {{/each}}
+        </ul>
+      {{/each}}
+
+    {{/each}}
+  {{/with}}
+</section>
