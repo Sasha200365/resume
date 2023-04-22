@@ -15,44 +15,36 @@
             {{#each works}}
               <li>
                 <div>{{position}}</div>
-                <br>
-               
-                <div>{{duration.from}} - {{#if duration.to}} {{duration.to}} {{else}} (працюю дотепер) {{/if}}</div>
-                <br>
+                <div class="my-3">{{duration.from}} - {{#if duration.to}} {{duration.to}} {{else}} (працюю дотепер) {{/if}}</div>
+                
                  {{!-- <div>{{> link text=company.name href=company.url blank=true isLine=false noline=true}}</div> --}}
                  <b>{{#unless company.url}} {{company.name}} {{/unless}}</b>
-                <br>
-                <br>
-                <div><strong>Projects ({{projectAmount}})</strong></div>
-                <br>
+                
+                <div class="my-4"><strong >Projects ({{projectAmount}})</strong></div>
                 <ul>
                   {{#each projects}}
                     <li>
                       <div>{{> link text=name href=url blank=true isLine=false noline=true}}</div>
                       <p>{{about}}</p>
                       <div><em>Project stacks </em></div>
-                      <div>({{stackAmoGnt}})</div>
-                <br>
+                      <div class="my-3">({{stackAmoGnt}})</div>
+                
                       {{#each stack}}
                         <li>
                           {{name}}                          
                         </li>
                       {{/each}}
-                <br>
-                      <div><em>Project awards </em></div>
-                <br>
+                <div class="my-3"><em>Project awards </em></div>
                       {{#each awards}}
                         <li>
                           {{name}}                         
                         </li>
-                     {{/each}}
+                      {{/each}}
 
                     </li>
                   {{/each}}
                 </ul>
-                <br>
                 
-  
               </li>
             {{/each}}
           </ul>

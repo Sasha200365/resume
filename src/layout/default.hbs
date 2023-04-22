@@ -26,28 +26,26 @@
       <div>
         <b>{{position}}</b>
       </div>
-      <br />
-      <div>
+     
+      <div class="mt-4">
         <em>{{salary}} </em>
       </div>
-      <br />
-      <div>
+     
+      <div class="mt-4">
         <address>{{address}} </address>
       </div>
-      <br />
-      <hr />
+     
+      <hr class="mt-4"/>
     </header>
     {{/with}}
 
     {{> nav}}
 
-    <br>
-    <hr>
-
+    
     {{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   }}
     {{{body}}}
 
-    <br>
+    
     <hr>
 
    {{#with footer}}

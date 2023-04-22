@@ -53,16 +53,16 @@
   <section>
     <div>
       <h2>Відомі публікації</h2>
-      <ul>
+      <ul class='mb-3'>
         {{#each notable_publications}}
           <li>Стаття: <b>{{title}}</b></li>
 
           <li>Рік публікації:
             <b>{{year}}</b></li>
 
-          <li>Опубліковано в:
+          <li class='mb-3'>Опубліковано в:
             <b>{{publisher}}</b></li>
-          <br />
+
         {{/each}}
       </ul>
     </div>
@@ -73,14 +73,15 @@
       <h2>Дружини</h2>
       <ul>
         {{#each partners}}
-          <li>Іи'я: <b>{{name}}</b></li>
+          <div class='my-3'>
+            <li>Ім'я: <b>{{name}}</b></li>
 
-          <li>Відносини:
-            <b>{{relationship}}</b></li>
+            <li>Відносини:
+              <b>{{relationship}}</b></li>
 
-          <li>Роки:
-            <b>{{years}}</b></li>
-          <br />
+            <li>Роки:
+              <b>{{years}}</b></li>
+          </div>
         {{/each}}
       </ul>
     </div>
@@ -94,7 +95,6 @@
           <li>Назва: <b>{{title}}</b></li>
           <li>Рік отримання:<b>{{year}}</b></li>
           <li>В галузі:<b>{{description}}</b></li>
-          <br />
         {{/each}}
       </ul>
     </div>
@@ -107,7 +107,6 @@
         <li><b>Isaac Newton</b></li>
         <li><b>James Clerk Maxwell</b></li>
         <li><b>Hermann Minkowski</b></li>
-        <br />
       </ul>
     </div>
   </section>
@@ -120,7 +119,6 @@
         <li><b>Erwin Schrödinger</b></li>
         <li><b>Werner Heisenberg</b></li>
         <li><b>Richard Feynman</b></li>
-        <br />
       </ul>
     </div>
   </section>
@@ -138,7 +136,6 @@
         <li><b>"The most beautiful thing we can experience
             is the mysterious. It is the source of all true
             art and all science"</b></li>
-        <br />
       </ul>
     </div>
   </section>
@@ -151,7 +148,6 @@
           <li>Назва: <b>{{title}}</b></li>
           <li>Рік відкриття: <b>{{year}}</b></li>
           <li>Що саме: <b>{{description}}</b></li>
-          <br />
         {{/each}}
       </ul>
     </div>
@@ -166,7 +162,6 @@
           <li>Що саме: <b>{{description}}</b></li>
           <li>Коли саме: <b>{{year}}</b></li>
           <li>Вид: <b>{{field}}</b></li>
-          <br />
         {{/with}}
       </ul>
     </div>
